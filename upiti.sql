@@ -9,9 +9,9 @@ WHERE Oprema.Naziv_opreme = 'Sprave za zgibove';
 
 #2
 SELECT
-		članovi.Ime,
-        članovi.Prezime, 
-        COUNT(*) AS BrojRezervacija
+	članovi.Ime,
+     članovi.Prezime, 
+    COUNT(*) AS BrojRezervacija
 FROM članovi
 JOIN Rezervacije ON članovi.Član_ID= rezervacije.Član_ID
 GROUP BY članovi.Ime, članovi.Prezime
@@ -28,7 +28,8 @@ SELECT
 FROM 
     Recenzije;
 
-SELECT članovi.Ime, 
+SELECT 
+       članovi.Ime, 
        članovi.Prezime, 
        SUM(članstvo.Cijena) AS UkupnaCijenaClanstva
 FROM Članovi
@@ -39,7 +40,8 @@ LIMIT 1;
 
 
 #5
-SELECT Pozicija,
- COUNT(*) AS BrojOsoblja
+SELECT 
+    Pozicija,
+    COUNT(*) AS BrojOsoblja
 FROM Osoblje
 GROUP BY Pozicija;
