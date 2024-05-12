@@ -10,7 +10,7 @@ WHERE Oprema.Naziv_opreme = 'Sprave za zgibove';
 #2
 SELECT
 	članovi.Ime,
-     članovi.Prezime, 
+    članovi.Prezime, 
     COUNT(*) AS BrojRezervacija
 FROM članovi
 JOIN Rezervacije ON članovi.Član_ID= rezervacije.Član_ID
